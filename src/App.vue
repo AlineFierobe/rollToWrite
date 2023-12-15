@@ -1,17 +1,26 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
+import OrganismHeader from "./components/organisms/header/OrganismHeader.vue";
+import OrganismFooter from "./components/organisms/footer/OrganismFooter.vue";
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <OrganismHeader title="Roll To Write" />
 
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
+
+  <OrganismFooter
+    title="Roll To Write"
+    devName="Aline Fierobe"
+    url="www.alinefierobe.com"
+  />
 </template>
 
-<style scoped></style>
+<style lang="scss">
+#app {
+  @apply min-h-screen;
+  @apply grid grid-rows-[auto_1fr_auto];
+}
+</style>
