@@ -15,6 +15,8 @@ import OrganismFooter from "./components/organisms/footer/OrganismFooter.vue";
 </template>
 
 <style lang="scss">
+@import "./assets/colorsPalette/_colors";
+
 #app {
   @apply min-h-screen;
   @apply flex flex-col-reverse justify-between;
