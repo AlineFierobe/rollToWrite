@@ -5,22 +5,23 @@ import OrganismFooter from "./components/organisms/footer/OrganismFooter.vue";
 </script>
 
 <template>
-  <OrganismHeader title="Roll To Write" />
+  <OrganismHeader />
 
   <main>
     <RouterView />
   </main>
 
-  <OrganismFooter
-    title="Roll To Write"
-    devName="Aline Fierobe"
-    url="www.alinefierobe.com"
-  />
+  <OrganismFooter />
 </template>
 
 <style lang="scss">
 #app {
   @apply min-h-screen;
-  @apply grid grid-rows-[auto_1fr_auto];
+  @apply flex flex-col-reverse justify-between;
+  @apply lg:grid lg:grid-rows-[auto_1fr_auto] lg:justify-stretch;
+
+  main {
+    @apply grow;
+  }
 }
 </style>
