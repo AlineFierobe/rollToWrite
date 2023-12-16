@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import store from "@/store/index";
+
 defineProps({
   title: String,
   url: String,
@@ -16,8 +18,10 @@ let organismClass = "o-footer";
 
 <template>
   <footer :class="organismClass">
-    <h3>{{ title }}</h3>
-    <a :href="url" target="_blank">by {{ devName }}</a>
+    <h3>{{ store.config.title }}</h3>
+    <a :href="store.config.devWebsite" target="_blank"
+      >by {{ store.config.devName }}</a
+    >
   </footer>
 </template>
 
