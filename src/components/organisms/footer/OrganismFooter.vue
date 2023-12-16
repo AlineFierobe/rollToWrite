@@ -18,8 +18,11 @@ let organismClass = "o-footer";
 
 <template>
   <footer :class="organismClass">
-    <h3>{{ store.config.title }}</h3>
-    <a :href="store.config.devWebsite" target="_blank"
+    <h3 :class="organismClass + '__title'">{{ store.config.title }}</h3>
+    <a
+      :href="store.config.devWebsite"
+      target="_blank"
+      :class="organismClass + '__link'"
       >by {{ store.config.devName }}</a
     >
   </footer>
