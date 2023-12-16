@@ -13,6 +13,11 @@ const config = {
       url: "/roll",
       icon: "dice",
     },
+    {
+      text: "Listes",
+      url: "/listings",
+      icon: "list-ul",
+    },
   ],
 };
 
