@@ -8,12 +8,12 @@ export default {
 import { RouterLink } from "vue-router";
 import FontAwesome from "../fontAwesome/AtomFontAwesome.vue";
 
-defineProps<{
-  icon?: string;
-  url: string;
-  text: string;
-  size?: string;
+const props = defineProps<{
   extraClasses?: string | Array<string>;
+  icon?: string;
+  size?: string;
+  text: string;
+  url: string;
 }>();
 
 let _atom_class = "a-navLink";
@@ -23,16 +23,20 @@ let _atom_class = "a-navLink";
   <RouterLink :to="url" :class="[_atom_class, extraClasses]">
     <FontAwesome
       v-if="icon"
-      :extraClasses="extraClasses + '__icon'"
+      :extraClasses="[
+        _atom_class + '__icon',
+        extraClasses ? extraClasses + '__icon' : '',
+      ]"
       :icon="icon"
       :size="size"
     />
-    <span :class="[_atom_class + '__text', extraClasses + '__text']">
+    <span
+      :class="[
+        _atom_class + '__text',
+        extraClasses ? extraClasses + '__text' : '',
+      ]"
+    >
       {{ text }}
     </span>
   </RouterLink>
 </template>
-
-<style scoped lang="scss">
-@import "./_navLink";
-</style>

@@ -24,7 +24,7 @@ let organismClass = "o-header";
             :text="link.text"
             :url="link.url"
             :icon="link.icon"
-            :extraClasses="organismClass + '__navListItem'"
+            :extraClasses="organismClass + '__navListAnchor'"
             size="3x"
           />
         </li>
@@ -33,6 +33,6 @@ let organismClass = "o-header";
   </header>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "./_header";
 </style>

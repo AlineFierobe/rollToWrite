@@ -1,7 +1,17 @@
-<script setup lang="ts"></script>
+<script lang="ts">
+export default {
+  name: "Roll Page",
+};
+</script>
+
+<script setup lang="ts">
+import Typography from "@/components/atoms/typography/AtomTypography.vue";
+</script>
 
 <template>
-  <div>Roll View</div>
+  <div>
+    <Typography html="Roll View" />
+  </div>
 </template>
 
 <style scoped lang="scss">
