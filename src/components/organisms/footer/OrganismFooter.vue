@@ -26,5 +26,5 @@ let organismClass = "o-footer";
 </template>
 
 <style scoped lang="scss">
-@import "./_footer.scss";
+@import "./_footer";
 </style>

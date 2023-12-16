@@ -33,5 +33,5 @@ let _atom_class = "a-navLink";
 </template>
 
 <style scoped lang="scss">
-@import "./_navLink.scss";
+@import "./_navLink";
 </style>

@@ -34,5 +34,5 @@ let organismClass = "o-header";
 </template>
 
 <style scoped lang="scss">
-@import "./_header.scss";
+@import "./_header";
 </style>
