@@ -14,16 +14,16 @@ defineProps({
   extraClasses: String,
 });
 
-let organismClass = "a-navLink";
+let atomClass = "a-navLink";
 </script>
 
 <template>
-  <RouterLink :to="url">
+  <RouterLink :to="url" :class="atomClass">
     <font-awesome-icon
       :icon="['fas', icon]"
-      :class="[organismClass + '__icon', extraClasses]"
+      :class="[atomClass + '__icon', extraClasses]"
     />
-    <span :class="[organismClass + '__text', extraClasses]">{{ text }}</span>
+    <span :class="[atomClass + '__text', extraClasses]">{{ text }}</span>
   </RouterLink>
 </template>
 

@@ -1,0 +1,11 @@
+.a-navLink {
+  &__icon {
+    @apply lg:hidden;
+  }
+
+  &__text {
+    @apply hidden;
+    @apply lg:block;
+    @apply font-exo uppercase font-bold text-xl;
+  }
+}
