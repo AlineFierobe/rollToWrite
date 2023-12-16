@@ -25,7 +25,7 @@ let organismClass = "o-header";
             :url="link.url"
             :icon="link.icon"
             :extraClasses="organismClass + '__navListItem'"
-            size="xl"
+            size="3x"
           />
         </li>
       </ul>
