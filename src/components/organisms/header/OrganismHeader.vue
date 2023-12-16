@@ -1,29 +1,32 @@
-<script setup lang="ts">
-import { RouterLink } from "vue-router";
-
-defineProps({
-  title: String,
-});
-</script>
-
 <script lang="ts">
 export default {
   name: "OrganismHeader",
 };
+</script>
+
+<script setup lang="ts">
+import AtomNavLink from "../../atoms/navLink/AtomNavLink.vue";
+import store from "@/store/index";
 
 let organismClass = "o-header";
 </script>
 
 <template>
   <header :class="organismClass">
-    <h2>{{ title }}</h2>
+    <h2>{{ store.config.title }}</h2>
     <nav :class="organismClass + '__nav'">
       <ul :class="organismClass + '__navListWrapper'">
-        <li :class="organismClass + '__navListItem'">
-          <RouterLink to="/">Home</RouterLink>
-        </li>
-        <li :class="organismClass + '__navListItem'">
-          <RouterLink to="/roll">Roll</RouterLink>
+        <li
+          v-for="link in store.config.nav"
+          :class="organismClass + '__navListItem'"
+        >
+          <AtomNavLink
+            :text="link.text"
+            :url="link.url"
+            :icon="link.icon"
+            :extraClasses="organismClass + '__navListItem'"
+            size="xl"
+          />
         </li>
       </ul>
     </nav>

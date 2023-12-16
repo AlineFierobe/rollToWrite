@@ -1,3 +1,30 @@
 .o-header {
-  @apply w-full;
+  @apply py-2 px-5;
+  @apply lg:grid lg:grid-cols-2;
+
+  h2 {
+    @apply hidden;
+    @apply lg:block;
+  }
+
+  &__nav {
+    @apply w-full;
+  }
+
+  &__navListWrapper {
+    @apply flex flex-row justify-around;
+    @apply lg:justify-between;
+  }
+
+  &__navListItem {
+    &__icon {
+      @apply h-10 w-10;
+      @apply lg:hidden;
+    }
+
+    &__text {
+      @apply hidden;
+      @apply lg:block;
+    }
+  }
 }

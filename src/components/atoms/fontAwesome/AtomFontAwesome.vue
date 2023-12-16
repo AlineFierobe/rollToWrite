@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  name: "AtomFontAwesome",
+  name: "FontAwesome",
 };
 </script>
 
@@ -9,7 +9,7 @@ const props = defineProps<{
   icon: string;
   size?: string;
   variant?: string;
-  extraClasses?: Array<string>;
+  extraClasses: string | Array<string>;
 }>();
 
 let _atom_class = "a-fontAwesome";
@@ -24,5 +24,3 @@ let _variant = props.variant ? props.variant : "fas";
     :size="_size"
   />
 </template>
-
-<style scoped lang="scss"></style>
