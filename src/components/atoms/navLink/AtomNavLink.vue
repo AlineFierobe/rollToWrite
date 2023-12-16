@@ -7,12 +7,12 @@ export default {
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
 
-defineProps({
-  icon: String,
-  url: String,
-  text: String,
-  extraClasses: String,
-});
+defineProps<{
+  icon: string;
+  url: string;
+  text: string;
+  extraClasses?: string;
+}>();
 
 let atomClass = "a-navLink";
 </script>
