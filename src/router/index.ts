@@ -16,7 +16,7 @@ const router = createRouter({
       component: () => import("@/views/roll/RollView.vue"),
     },
     {
-      path: "/listings",
+      path: "/listes",
       name: "listings",
       component: () => import("@/views/listing/ListingView.vue"),
       children: listings,

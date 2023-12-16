@@ -5,14 +5,17 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { RouterView } from "vue-router";
+import { RouterView, RouterLink } from "vue-router";
+import store from "../../store/index";
 </script>
 
 <template>
   <div>
     Listing
     <div>
-      <a href="/listings/words">Words</a>
+      <RouterLink v-for="link in store.config.listingFilters" :to="link.url">
+        {{ link.text }}
+      </RouterLink>
     </div>
     <RouterView />
   </div>

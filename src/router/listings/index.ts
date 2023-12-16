@@ -1,26 +1,28 @@
+const listes = "/listes";
+
 const listings = [
   {
-    path: "/locations",
+    path: listes + "/localisations",
     name: "locations",
     component: () => import("@/views/listing/locations/LocationsView.vue"),
   },
   {
-    path: "/characters",
+    path: listes + "/personnages",
     name: "characters",
     component: () => import("@/views/listing/characters/CharactersView.vue"),
   },
   {
-    path: "/situations",
+    path: listes + "/situations",
     name: "situations",
     component: () => import("@/views/listing/situations/SituationsView.vue"),
   },
   {
-    path: "/listings/words",
+    path: listes + "/mots-incongrus",
     name: "words",
     component: () => import("@/views/listing/words/WordsView.vue"),
   },
   {
-    path: "/constraints",
+    path: listes + "/contraintes",
     name: "constraints",
     component: () => import("@/views/listing/constraints/ConstraintView.vue"),
   },

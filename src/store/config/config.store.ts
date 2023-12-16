@@ -15,8 +15,30 @@ const config = {
     },
     {
       text: "Listes",
-      url: "/listings",
+      url: "/listes",
       icon: "list-ul",
+    },
+  ],
+  listingFilters: [
+    {
+      text: "Personnages",
+      url: "/listes/personnages",
+    },
+    {
+      text: "Mots Incongrus",
+      url: "/listes/mots-incongrus",
+    },
+    {
+      text: "Situations",
+      url: "/listes/situations",
+    },
+    {
+      text: "Localisations",
+      url: "/listes/localisations",
+    },
+    {
+      text: "Contraintes",
+      url: "/listes/contraintes",
     },
   ],
 };
