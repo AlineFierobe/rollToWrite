@@ -6,6 +6,8 @@ export default {
 
 <script setup lang="ts">
 import NavLink from "../../atoms/navLink/AtomNavLink.vue";
+import Typography from "../../atoms/typography/AtomTypography.vue";
+
 import store from "@/store/index";
 
 let organismClass = "o-header";
@@ -13,7 +15,11 @@ let organismClass = "o-header";
 
 <template>
   <header :class="organismClass">
-    <h2>{{ store.config.title }}</h2>
+    <Typography
+      :extraClasses="organismClass + '__title'"
+      :html="store.config.title"
+      version="heading2"
+    />
     <nav :class="organismClass + '__nav'">
       <ul :class="organismClass + '__navListWrapper'">
         <li
@@ -21,11 +27,11 @@ let organismClass = "o-header";
           :class="organismClass + '__navListItem'"
         >
           <NavLink
+            :extraClasses="organismClass + '__navListAnchor'"
+            :icon="link.icon"
+            size="3x"
             :text="link.text"
             :url="link.url"
-            :icon="link.icon"
-            :extraClasses="organismClass + '__navListAnchor'"
-            size="3x"
           />
         </li>
       </ul>

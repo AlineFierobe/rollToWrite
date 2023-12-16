@@ -1,9 +1,13 @@
-.o-header {
-  @apply lg:grid lg:grid-cols-2 lg:py-2 lg:px-5;
+@import "./_headerColors";
 
-  h2 {
+.o-header {
+  @apply lg:grid lg:grid-cols-2 lg:py-2 lg:px-5 lg:items-center;
+  @apply lg:border-b lg:border-solid lg:border-[--header-background];
+
+  &__title {
     @apply hidden;
     @apply lg:block;
+    @apply text-[--header-title];
   }
 
   &__nav {
@@ -16,22 +20,39 @@
   }
 
   &__navListItem {
-    @apply w-full text-center p-2;
-    @apply bg-[--primary1];
-    @apply lg:bg-transparent;
+    @apply w-full;
   }
 
   &__navListAnchor {
+    @apply p-5 inline-block w-full text-center;
+    @apply bg-[--header-nav-list-background-mobile];
+    @apply lg:bg-[--header-nav-list-background-large];
+    @apply focus:outline-double focus:outline-1;
+
     svg {
-      @apply text-[--neutral2];
+      @apply text-[--header-nav-list-anchor-icon];
       @apply lg:hidden;
     }
 
     &__text {
       @apply hidden;
       @apply lg:block;
-      @apply text-xl uppercase font-bold font-exo;
-      @apply text-[--primary3];
+      @apply text-xl uppercase font-bold font-exo w-fit mx-auto;
+      @apply border-b-4 border-solid;
+      @apply text-[--header-nav-list-anchor-text] border-[--header-nav-list-anchor-border];
+    }
+
+    &.router-link-active {
+      @apply bg-[--header-nav-list-background-active-mobile];
+      @apply lg:bg-[--header-nav-list-background-active-large];
+
+      svg {
+        @apply text-[--header-nav-list-anchor-icon-active];
+      }
+
+      .o-header__navListAnchor__text {
+        @apply text-[--header-nav-list-anchor-text-active] border-[--header-nav-list-anchor-border-active];
+      }
     }
   }
 }

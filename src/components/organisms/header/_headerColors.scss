@@ -1,0 +1,19 @@
+.o-header {
+  --header-title: var(--neutral3);
+  ---header-background: var(--primary1);
+
+  --header-nav-list-background-mobile: var(--primary1);
+  --header-nav-list-background-large: transparent;
+
+  --header-nav-list-background-active-mobile: var(--primary4);
+  --header-nav-list-background-active-large: transparent;
+
+  --header-nav-list-anchor-icon: var(--neutral2);
+  --header-nav-list-anchor-icon-active: var(--neutral2);
+
+  --header-nav-list-anchor-text: var(--neutral3);
+  --header-nav-list-anchor-text-active: var(--neutral3);
+
+  --header-nav-list-anchor-border: transparent;
+  --header-nav-list-anchor-border-active: var(--secondary2);
+}
