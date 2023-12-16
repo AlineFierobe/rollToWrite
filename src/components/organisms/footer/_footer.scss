@@ -1,4 +1,11 @@
+@import "./_footerColors";
+
 .o-footer {
+  &__title {
+    @apply text-[--footer-title-font];
+    @apply text-2xl font-exo uppercase font-bold;
+  }
+
   &__link {
     @apply hidden;
     @apply lg:block;

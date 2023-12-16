@@ -1,24 +1,29 @@
+<script lang="ts">
+export default {
+  name: "OrganismFooter",
+};
+</script>
+
 <script setup lang="ts">
 import store from "@/store/index";
+import Typography from "../../atoms/typography/AtomTypography.vue";
 
 defineProps({
   title: String,
   url: String,
   devName: String,
 });
-</script>
-
-<script lang="ts">
-export default {
-  name: "OrganismFooter",
-};
 
 let organismClass = "o-footer";
 </script>
 
 <template>
   <footer :class="organismClass">
-    <h3 :class="organismClass + '__title'">{{ store.config.title }}</h3>
+    <Typography
+      :extraClasses="organismClass + '__title'"
+      htmlTag="h3"
+      :html="store.config.title"
+    />
     <a
       :href="store.config.devWebsite"
       target="_blank"
