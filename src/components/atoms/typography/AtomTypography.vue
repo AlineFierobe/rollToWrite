@@ -14,7 +14,17 @@ const props = defineProps<{
 
 let _atom_class = "a-typography";
 let _tag = props.htmlTag ? props.htmlTag : "div";
-let _version = props.version ? "-" + props.version : "-body1";
+let _version =
+  _tag == "h1" ||
+  _tag == "h2" ||
+  _tag == "h3" ||
+  _tag == "h4" ||
+  _tag == "h5" ||
+  _tag == "h6"
+    ? ""
+    : props.version
+    ? "-" + props.version
+    : "-body1";
 </script>
 
 <template>
