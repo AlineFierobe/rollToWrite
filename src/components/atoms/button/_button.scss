@@ -1,0 +1,13 @@
+@import "./_buttonColors";
+
+.a-button {
+  @apply bg-[--button-background] border-[--button-border] text-[--button-text];
+  @apply focus:bg-[--button-background-focus] focus:border-[--button-border-focus] focus:text-[--button-text-focus];
+  @apply hover:bg-[--button-background-hover] hover:border-[--button-border-hover] hover:text-[--button-text-hover];
+
+  svg {
+    @apply fill-[--button-icon];
+    @apply focus:fill-[--button-icon-focus];
+    @apply hover:fill-[--button-icon-hover];
+  }
+}
