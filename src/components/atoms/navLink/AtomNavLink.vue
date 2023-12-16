@@ -21,7 +21,11 @@ let _atom_class = "a-navLink";
 
 <template>
   <RouterLink :to="url" :class="_atom_class">
-    <FontAwesome :icon="icon" :size="size" />
+    <FontAwesome
+      :extraClasses="extraClasses + '__icon'"
+      :icon="icon"
+      :size="size"
+    />
     <span :class="[_atom_class + '__text', extraClasses + '__text']">
       {{ text }}
     </span>

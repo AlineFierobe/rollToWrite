@@ -9,7 +9,7 @@ const props = defineProps<{
   icon: string;
   size?: string;
   variant?: string;
-  extraClasses: string | Array<string>;
+  extraClasses?: string | Array<string>;
 }>();
 
 let _atom_class = "a-fontAwesome";

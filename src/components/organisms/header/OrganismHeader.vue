@@ -5,7 +5,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import AtomNavLink from "../../atoms/navLink/AtomNavLink.vue";
+import NavLink from "../../atoms/navLink/AtomNavLink.vue";
 import store from "@/store/index";
 
 let organismClass = "o-header";
@@ -20,7 +20,7 @@ let organismClass = "o-header";
           v-for="link in store.config.nav"
           :class="organismClass + '__navListItem'"
         >
-          <AtomNavLink
+          <NavLink
             :text="link.text"
             :url="link.url"
             :icon="link.icon"
