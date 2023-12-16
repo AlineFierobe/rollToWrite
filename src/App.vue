@@ -18,12 +18,17 @@ import OrganismFooter from "./components/organisms/footer/OrganismFooter.vue";
 @import "./assets/colorsPalette/_colors";
 
 #app {
+  @apply bg-[--neutral3];
   @apply min-h-screen;
   @apply flex flex-col-reverse justify-between;
   @apply lg:grid lg:grid-rows-[auto_1fr_auto] lg:justify-stretch;
 
   main {
     @apply grow;
+  }
+
+  * {
+    @apply outline-[--semantic3];
   }
 }
 </style>
