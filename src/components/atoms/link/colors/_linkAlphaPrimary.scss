@@ -1,0 +1,17 @@
+.a-link {
+  &.-alpha {
+    &.-primary {
+      --link-border: transparent;
+      --link-icon: transparent;
+      --link-text: var(--neutral5);
+
+      --link-border-focus: transparent;
+      --link-icon-focus: transparent;
+      --link-text-focus: var(--neutral6);
+
+      --link-border-hover: transparent;
+      --link-icon-hover: transparent;
+      --link-text-hover: var(--neutral6);
+    }
+  }
+}
