@@ -1,24 +1,10 @@
 const config = {
+  about: {
+    text: "À propos",
+    url: "/a-propos",
+  },
   devName: "Aline Fierobe",
   devWebsite: "www.alinefierobe.com",
-  title: "Roll To Write",
-  nav: [
-    {
-      text: "Accueil",
-      url: "/",
-      icon: "house",
-    },
-    {
-      text: "Lancer de Dés",
-      url: "/roll",
-      icon: "dice",
-    },
-    {
-      text: "Listes",
-      url: "/listes",
-      icon: "list-ul",
-    },
-  ],
   listingFilters: [
     {
       text: "Personnages",
@@ -41,6 +27,24 @@ const config = {
       url: "/listes/contraintes",
     },
   ],
+  nav: [
+    {
+      icon: "house",
+      text: "Accueil",
+      url: "/",
+    },
+    {
+      icon: "dice",
+      text: "Lancer de Dés",
+      url: "/roll",
+    },
+    {
+      icon: "list-ul",
+      text: "Listes",
+      url: "/listes",
+    },
+  ],
+  title: "Roll To Write",
 };
 
 export default config;
