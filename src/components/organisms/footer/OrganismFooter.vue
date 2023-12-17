@@ -1,18 +1,14 @@
 <script lang="ts">
 export default {
-  name: "OrganismFooter",
+  name: "Footer",
 };
 </script>
 
 <script setup lang="ts">
-import store from "@/store/index";
-import Typography from "../../atoms/typography/AtomTypography.vue";
+import NavLink from "@/components/atoms/navLink/AtomNavLink.vue";
+import Typography from "@/components/atoms/typography/AtomTypography.vue";
 
-defineProps({
-  title: String,
-  url: String,
-  devName: String,
-});
+import store from "@/store/index";
 
 let organismClass = "o-footer";
 </script>
@@ -21,18 +17,18 @@ let organismClass = "o-footer";
   <footer :class="organismClass">
     <Typography
       :extraClasses="organismClass + '__title'"
-      htmlTag="h3"
       :html="store.config.title"
+      version="title"
     />
-    <a
-      :href="store.config.devWebsite"
-      target="_blank"
-      :class="organismClass + '__link'"
-      >by {{ store.config.devName }}</a
-    >
+
+    <NavLink
+      :extraClasses="organismClass + '__link'"
+      :text="store.config.about.text"
+      :url="store.config.about.url"
+    />
   </footer>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "./_footer";
 </style>

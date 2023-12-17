@@ -1,13 +1,29 @@
 @import "./_footerColors";
 
 .o-footer {
+  @apply bg-[--footer-background-mobile];
+  @apply lg:bg-[--footer-background-large];
+
+  @apply flex flex-row justify-between items-center p-3;
+  @apply lg:py-1.5;
+
   &__title {
-    @apply text-[--footer-title-font];
+    @apply text-[--footer-title-font-mobile];
+    @apply lg:text-[--footer-title-font-large];
+
     @apply text-2xl font-exo uppercase font-bold;
+    @apply lg:text-base;
   }
 
   &__link {
-    @apply hidden;
-    @apply lg:block;
+    @apply text-[--footer-link-mobile];
+    @apply focus:text-[--footer-link-mobile-focus];
+    @apply hover:text-[--footer-link-mobile-hover];
+    @apply lg:text-[--footer-link-large];
+    @apply lg:focus:text-[--footer-link-large-focus];
+    @apply lg:hover:text-[--footer-link-large-hover];
+
+    @apply text-sm;
+    @apply focus:outline-double focus:outline-offset-2;
   }
 }

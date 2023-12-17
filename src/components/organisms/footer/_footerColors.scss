@@ -1,3 +1,15 @@
 .o-footer {
-  --footer-title-font: var(--primary3);
+  --footer-background-mobile: var(--primary1);
+  --footer-background-large: var(--neutral4);
+
+  --footer-title-font-mobile: var(--neutral3);
+  --footer-title-font-large: var(--neutral5);
+
+  --footer-link-mobile: var(--neutral3);
+  --footer-link-mobile-focus: var(--neutral4);
+  --footer-link-mobile-hover: var(--neutral4);
+
+  --footer-link-large: var(--neutral5);
+  --footer-link-large-focus: var(--neutral6);
+  --footer-link-large-hover: var(--neutral6);
 }
