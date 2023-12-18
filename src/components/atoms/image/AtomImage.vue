@@ -14,7 +14,7 @@ let _atom_class = "a-image";
     :src="url"
     :class="[_atom_class, extraClasses]"
     :alt="alt"
-    :title="title ? title : alt"
+    :title="title"
   />
 </template>
 
