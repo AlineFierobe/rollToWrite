@@ -8,7 +8,7 @@ export default {
 import NavLink from "@/components/atoms/navLink/AtomNavLink.vue";
 import Typography from "@/components/atoms/typography/AtomTypography.vue";
 
-import store from "@/store/index";
+import config from "@/store/config/config.store";
 
 let organismClass = "o-footer";
 </script>
@@ -17,14 +17,14 @@ let organismClass = "o-footer";
   <footer :class="organismClass">
     <Typography
       :extraClasses="organismClass + '__title'"
-      :html="store.config.title"
+      :html="config.title"
       version="title"
     />
 
     <NavLink
       :extraClasses="organismClass + '__link'"
-      :text="store.config.about.text"
-      :url="store.config.about.url"
+      :text="config.about.text"
+      :url="config.about.url"
     />
   </footer>
 </template>

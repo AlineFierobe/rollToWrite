@@ -19,8 +19,8 @@ const config = {
       url: "/listes/situations",
     },
     {
-      text: "Localisations",
-      url: "/listes/localisations",
+      text: "Lieux",
+      url: "/listes/lieux",
     },
     {
       text: "Contraintes",

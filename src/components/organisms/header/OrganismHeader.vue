@@ -8,7 +8,7 @@ export default {
 import NavLink from "../../atoms/navLink/AtomNavLink.vue";
 import Typography from "../../atoms/typography/AtomTypography.vue";
 
-import store from "@/store/index";
+import config from "@/store/config/config.store";
 
 let organismClass = "o-header";
 </script>
@@ -17,15 +17,12 @@ let organismClass = "o-header";
   <header :class="organismClass">
     <Typography
       :extraClasses="organismClass + '__title'"
-      :html="store.config.title"
+      :html="config.title"
       version="heading2"
     />
     <nav :class="organismClass + '__nav'">
       <ul :class="organismClass + '__navListWrapper'">
-        <li
-          v-for="link in store.config.nav"
-          :class="organismClass + '__navListItem'"
-        >
+        <li v-for="link in config.nav" :class="organismClass + '__navListItem'">
           <NavLink
             :extraClasses="organismClass + '__navListAnchor'"
             :icon="link.icon"

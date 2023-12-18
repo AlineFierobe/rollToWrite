@@ -2,7 +2,7 @@ const listes = "/listes";
 
 const listings = [
   {
-    path: listes + "/localisations",
+    path: listes + "/lieux",
     name: "locations",
     component: () => import("@/views/listing/locationsList/LocationsView.vue"),
   },
