@@ -7,7 +7,7 @@ export default {
 <script setup lang="ts"></script>
 
 <template>
-  <div>Locations</div>
+  <div>Lieux</div>
 </template>
 
 <style scoped lang="scss"></style>
