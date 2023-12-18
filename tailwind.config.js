@@ -6,7 +6,11 @@ export default {
       exo: ['"Exo 2"', "sans-serif"],
       roboto: ["Roboto", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        cards: "auto 1fr",
+      },
+    },
   },
   plugins: [],
 };
