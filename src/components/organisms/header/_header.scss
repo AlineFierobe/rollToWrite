@@ -1,7 +1,8 @@
 @import "./_headerColors";
 
 .o-header {
-  @apply lg:grid lg:grid-cols-2 lg:py-2 lg:px-5 lg:items-center;
+  @apply w-full fixed bottom-0;
+  @apply lg:relative lg:grid lg:grid-cols-2 lg:py-2 lg:px-5 lg:items-center;
   @apply lg:border-b lg:border-solid lg:bg-[--header-background];
 
   &__title {
