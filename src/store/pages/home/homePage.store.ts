@@ -9,6 +9,19 @@ const homePage = {
     icon: "pen-nib",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit dui dictum nisl malesuada rutrum. Integer elementum, enim vitae consectetur luctus, nisi nisi viverra turpis, et hendrerit est elit quis tellus. Nulla eleifend lacinia sapien eu ornare. Nam pulvinar sapien nec purus vehicula lobortis. Nulla vel feugiat dui, ac rhoncus urna. Donec suscipit cursus ex vitae ornare. Maecenas mollis posuere imperdiet. Nulla facilisi. Praesent sed magna non dui aliquet accumsan bibendum sed turpis. Donec feugiat magna nec sapien faucibus, ac rhoncus nisl finibus. Curabitur pretium iaculis nisl ut aliquet. Cras dolor augue, luctus in libero quis, sodales tincidunt tellus. Nam neque justo, tempor sit amet mauris in, porttitor tincidunt eros. Proin et risus orci.",
   },
+  links: [
+    {
+      description:
+        "Si tu n'aimes pas les surprises, tu peux vérifier toutes les situations, contraintes ... sur lesquels il est possible de tomber.",
+      text: "Découvrir les Possibilités",
+      url: "/listes",
+    },
+    {
+      description: "Oseras-tu relever le défi en laissant faire le hasard ?",
+      text: "Lancer les Dés",
+      url: "/roll",
+    },
+  ],
 };
 
 export default homePage;
