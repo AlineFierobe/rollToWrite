@@ -1,28 +1,28 @@
 .p-home {
-  &__description {
-    @apply container mx-auto px-2 pt-5;
+  &__descriptionWrapper {
+    @apply container mx-auto px-2 my-5;
     @apply lg:grid lg:grid-cols-cards lg:gap-5 lg:items-center;
+  }
 
-    &__icon {
-      @apply text-[--home-description-icon];
+  &__descriptionIcon {
+    @apply text-[--home-description-icon];
 
-      @apply hidden;
-      @apply lg:block;
-    }
+    @apply hidden;
+    @apply lg:block;
+  }
 
-    &__html {
-      @apply text-[--home-description-text];
-    }
+  &__descriptionHtml {
+    @apply text-[--home-description-text];
+  }
 
-    &__title {
-      @apply text-[--home-description-title];
+  &__descriptionTitle {
+    @apply text-[--home-description-title];
 
-      @apply col-span-2;
+    @apply col-span-2;
 
-      span {
-        @apply block;
-        @apply lg:inline-block;
-      }
+    span {
+      @apply block;
+      @apply lg:inline-block;
     }
   }
 }

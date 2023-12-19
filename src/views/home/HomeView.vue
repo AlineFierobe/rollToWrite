@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BannerAlpha from "@/components/molecules/banner/bannerAlpha/MoleculeBannerAlpha.vue";
 import SectionDescription from "./sections/description/SectionDescription.vue";
+import SectionLinks from "./sections/links/SectionLinks.vue";
 
 import data from "@/store/pages/home/homePage.store";
 
@@ -18,6 +19,9 @@ let _page_class = "p-home";
 
     <!-- SECTION DESCRIPTION -->
     <SectionDescription :content="data.description" :pageClass="_page_class" />
+
+    <!-- SECTION LINKS -->
+    <SectionLinks :links="data.links" :pageClass="_page_class" />
   </div>
 </template>
 

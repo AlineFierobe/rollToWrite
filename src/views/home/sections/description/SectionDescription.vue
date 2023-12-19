@@ -13,21 +13,21 @@ defineProps<{
 </script>
 
 <template>
-  <section :class="pageClass + '__description'">
+  <section :class="pageClass + '__descriptionWrapper'">
     <Typography
-      :extraClasses="pageClass + '__description__title'"
+      :extraClasses="pageClass + '__descriptionTitle'"
       :html="content.title"
       htmlTag="h1"
       version="heading2"
     />
 
     <FontAwesome
-      :extraClasses="pageClass + '__description__icon'"
+      :extraClasses="pageClass + '__descriptionIcon'"
       :icon="content.icon"
       size="5x"
     />
     <Typography
-      :extraClasses="pageClass + '__description__html'"
+      :extraClasses="pageClass + '__descriptionHtml'"
       :html="content.text"
     />
   </section>
