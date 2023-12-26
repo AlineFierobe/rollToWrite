@@ -6,6 +6,7 @@ defineProps<{
   pageClass: string;
   links: Array<{
     description: string;
+    icon: string;
     text: string;
     url: string;
   }>;
@@ -16,13 +17,15 @@ defineProps<{
   <section :class="pageClass + '__linksWrapper'">
     <div v-for="link in links" :class="pageClass + '__linkItem'">
       <Typography
-        :html="link.description"
         :extra-classes="pageClass + '__linkDescription'"
+        :html="link.description"
+        version="body2"
       />
       <NavLink
-        :url="link.url"
-        :text="link.text"
         :extraClasses="pageClass + '__link'"
+        :icon="link.icon"
+        :text="link.text"
+        :url="link.url"
       />
     </div>
   </section>

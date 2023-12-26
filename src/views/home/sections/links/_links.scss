@@ -1,8 +1,42 @@
 .p-home {
   &__linksWrapper {
-    @apply container mx-auto mb-24;
-    @apply grid gap-5 items-center justify-center;
-    @apply md:grid-cols-2;
+    @apply container mb-24 text-center;
+    @apply flex flex-col gap-10 items-center justify-center;
+    @apply md:flex-row md:justify-evenly;
     @apply lg:mb-5;
+  }
+
+  &__linkItem {
+    @apply w-full flex flex-col gap-2.5;
+    @apply lg:w-1/4;
+  }
+
+  &__linkDescription {
+    @apply text-[--home-link-description];
+  }
+
+  &__link {
+    @apply bg-[--home-link-button-icon-background];
+    @apply focus:bg-[--home-link-button-icon-background-hover];
+    @apply hover:bg-[--home-link-button-icon-background-hover];
+
+    @apply mx-auto inline-flex items-center rounded-md;
+
+    &__icon {
+      @apply text-[--home-link-button-icon-color];
+      @apply group-focus:text-[--home-link-button-icon-color-hover];
+      @apply group-hover:text-[--home-link-button-icon-color-hover];
+
+      @apply px-2.5 py-1.5;
+    }
+
+    &__text {
+      @apply bg-[--home-link-button-text-background] text-[--home-link-button-text-color];
+      @apply group-focus:bg-[--home-link-button-text-background-hover] group-focus:text-[--home-link-button-text-color-hover];
+      @apply group-hover:bg-[--home-link-button-text-background-hover] group-hover:text-[--home-link-button-text-color-hover];
+
+      @apply text-lg font-exo uppercase;
+      @apply px-2.5 py-1.5 h-full rounded-r-md;
+    }
   }
 }

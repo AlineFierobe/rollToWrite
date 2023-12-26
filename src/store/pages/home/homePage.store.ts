@@ -13,11 +13,13 @@ const homePage = {
     {
       description:
         "Si tu n'aimes pas les surprises, tu peux vérifier toutes les situations, contraintes ... sur lesquels il est possible de tomber.",
+      icon: "list",
       text: "Découvrir les Possibilités",
       url: "/listes",
     },
     {
       description: "Oseras-tu relever le défi en laissant faire le hasard ?",
+      icon: "dice-d6",
       text: "Lancer les Dés",
       url: "/roll",
     },

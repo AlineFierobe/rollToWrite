@@ -1,6 +1,6 @@
 .p-home {
   &__descriptionWrapper {
-    @apply container my-5;
+    @apply container mt-5 mb-10;
     @apply lg:grid lg:grid-cols-cards lg:gap-5 lg:items-center;
   }
 
