@@ -6,8 +6,8 @@
   @apply lg:bg-[--header-background];
 
   &__title {
-    @apply hidden;
-    @apply lg:block;
+    @apply sr-only;
+    @apply lg:not-sr-only;
     @apply text-[--header-title];
   }
 
