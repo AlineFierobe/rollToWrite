@@ -1,3 +1,9 @@
+<script lang="ts">
+export default {
+  name: "Banner Alpha",
+};
+</script>
+
 <script setup lang="ts">
 defineProps<{
   extraClasses?: string | Array<string>;
