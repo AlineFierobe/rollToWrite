@@ -2,6 +2,11 @@ const listes = "/listes";
 
 const listings = [
   {
+    path: listes,
+    name: "default",
+    component: () => import("@/views/listing/readView/ReadView.vue"),
+  },
+  {
     path: listes + "/lieux",
     name: "locations",
     component: () => import("@/views/listing/locationsList/LocationsView.vue"),

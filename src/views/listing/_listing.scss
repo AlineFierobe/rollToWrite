@@ -1,0 +1,31 @@
+@import "listingColors.scss";
+
+.p-listing {
+  @apply container mt-5;
+
+  &__description {
+    @apply my-3;
+  }
+
+  &__subSectionWrapper {
+    @apply lg:flex lg:flex-row lg:gap-10;
+  }
+
+  &__subNavWrapper {
+    @apply flex flex-row flex-wrap gap-1.5;
+    @apply lg:flex-col lg:gap-5;
+  }
+
+  &__subNavItem {
+    @apply bg-[--listing-sub-nav-background] text-[--listing-sub-nav-text];
+    @apply focus:bg-[--listing-sub-nav-background-hover] focus:text-[--listing-sub-nav-text-hover];
+    @apply hover:bg-[--listing-sub-nav-background-hover] hover:text-[--listing-sub-nav-text-hover];
+
+    @apply font-exo uppercase font-bold;
+    @apply px-2.5 py-1.5 rounded-md;
+
+    &.router-link-exact-active {
+      @apply bg-[--listing-sub-nav-background-active] text-[--listing-sub-nav-text-active];
+    }
+  }
+}
