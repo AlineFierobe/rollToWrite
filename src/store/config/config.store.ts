@@ -11,8 +11,8 @@ const config = {
       url: "/listes/personnages",
     },
     {
-      text: "Mots Incongrus",
-      url: "/listes/mots-incongrus",
+      text: "Mots",
+      url: "/listes/mots",
     },
     {
       text: "Situations",

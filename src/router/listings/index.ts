@@ -24,7 +24,7 @@ const listings = [
       import("@/views/listing/situationsList/SituationsView.vue"),
   },
   {
-    path: listes + "/mots-incongrus",
+    path: listes + "/mots",
     name: "words",
     component: () => import("@/views/listing/wordsList/WordsView.vue"),
   },

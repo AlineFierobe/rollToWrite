@@ -1,5 +1,19 @@
+@import "_templateListingColors.scss";
+
 .t-listing {
+  @apply w-full mb-20;
+  @apply lg:mb-0;
+
   &__title {
     @apply pb-2.5;
+  }
+
+  &__cardsWrapper {
+    @apply scrollbar-track-[color:var(--scrollbar-track-background)] scrollbar-thumb-[color:var(--scrollbar-thumb-background)];
+
+    @apply lg:h-auto lg:max-h-[55vh] lg:overflow-auto lg:overscroll-none;
+    @apply lg:scrollbar-thin lg:scrollbar-corner-rounded-md lg:pr-2;
+    @apply xl:max-h-[60vh];
+    @apply 2xl:max-h-[65vh];
   }
 }

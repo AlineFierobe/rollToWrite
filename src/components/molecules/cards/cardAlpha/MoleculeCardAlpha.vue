@@ -29,7 +29,7 @@ let _molecule_class = "m-cardAlpha";
       />
     </div>
 
-    <Typography :html="html" version="body2" />
+    <Typography :html="html" :extraClasses="_molecule_class + '__text'" />
   </article>
 </template>
 

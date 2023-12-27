@@ -4,10 +4,19 @@ export default {
 };
 </script>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import list from "@/store/listings/words/words.store";
+import page from "@/store/pages/listings/words/wordsPage.store";
+
+import TemplateListing from "@/components/organisms/template/templateListing/TemplateListing.vue";
+
+const _page_class = "p-wordsListing";
+</script>
 
 <template>
-  <div>Words</div>
+  <TemplateListing
+    :cards="list"
+    :extraClasses="_page_class"
+    :title="page.title"
+  />
 </template>
-
-<style scoped lang="scss"></style>

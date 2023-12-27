@@ -1,7 +1,7 @@
 @import "listingColors.scss";
 
 .p-listing {
-  @apply container mt-5;
+  @apply container my-5 h-full;
 
   &__description {
     @apply my-3;

@@ -4,16 +4,16 @@
   @apply even:bg-[--card-background-even] even:text-[--card-text-even];
   @apply odd:bg-[--card-background-odd] odd:text-[--card-text-odd];
 
-  @apply p-5 rounded-md;
+  @apply p-5 rounded-md h-fit;
 
   &__flagWrapper {
-    @apply flex flex-row gap-2;
+    @apply flex flex-row gap-2 pb-2;
 
     .-tag {
       @apply even:bg-[--tag-background-even] even:text-[tag-text-even];
       @apply odd:bg-[--tag-background-odd] odd:text-[tag-text-odd];
 
-      @apply text-xs font-exo;
+      @apply text-xs font-exo flex items-center justify-center;
       @apply px-1 pb-1 rounded-md;
     }
   }

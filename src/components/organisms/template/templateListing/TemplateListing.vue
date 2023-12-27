@@ -28,7 +28,7 @@ const _template_class = "t-listing";
 
     <ListingAlpha
       :cards="cards"
-      :extraClasses="_template_class + '__cardWrapper'"
+      :extraClasses="_template_class + '__cardsWrapper'"
     />
   </section>
 </template>
