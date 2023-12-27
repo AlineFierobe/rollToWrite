@@ -5,7 +5,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import store from "@/store";
+import store from "@/store/listings/listing/listing.store";
 
 import Typography from "@/components/atoms/typography/AtomTypography.vue";
 import NavLink from "@/components/atoms/navLink/AtomNavLink.vue";
@@ -17,7 +17,7 @@ let _page_class = "p-listingView";
   <div :class="_page_class">
     <Typography
       :extraClasses="_page_class + '__tagline'"
-      :html="store.listings.listing.defaultTagline"
+      :html="store.defaultTagline"
       htmlTag="div"
       version="subheading2"
     />
@@ -26,11 +26,15 @@ let _page_class = "p-listingView";
       à
       <Typography
         :extraClasses="_page_class + '__text'"
-        :html="store.listings.listing.defaultText"
+        :html="store.defaultText"
         htmlTag="div"
       />
 
-      <NavLink url="/contact" text="ce lien" />
+      <NavLink
+        :extraClasses="_page_class + '__link'"
+        :text="store.contactLinkText"
+        :url="store.contactLinkUrl"
+      />
     </div>
   </div>
 </template>

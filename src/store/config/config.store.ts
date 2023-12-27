@@ -36,7 +36,7 @@ const config = {
     {
       icon: "dice",
       text: "Lancer de Dés",
-      url: "/roll",
+      url: "/lancer-de-dés",
     },
     {
       icon: "list-ul",

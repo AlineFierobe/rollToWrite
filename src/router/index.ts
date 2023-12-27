@@ -11,7 +11,12 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/roll",
+      path: "/contact",
+      name: "contact",
+      component: () => import("@/views/contact/ContactView.vue"),
+    },
+    {
+      path: "/lancer-de-dés",
       name: "roll",
       component: () => import("@/views/roll/RollView.vue"),
     },
