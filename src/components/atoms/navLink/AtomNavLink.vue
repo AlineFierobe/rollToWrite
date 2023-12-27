@@ -20,7 +20,11 @@ let _atom_class = "a-navLink";
 </script>
 
 <template>
-  <RouterLink :to="url" :class="[_atom_class, extraClasses, 'group']">
+  <RouterLink
+    :to="url"
+    :title="text"
+    :class="[_atom_class, extraClasses, 'group']"
+  >
     <FontAwesome
       v-if="icon"
       :extraClasses="[

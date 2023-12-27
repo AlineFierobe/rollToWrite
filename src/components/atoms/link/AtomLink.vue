@@ -28,6 +28,7 @@ let _variant = props.variant ? "-" + props.variant : "-primary";
     :href="url"
     :class="[_atom_class, _version, _variant, extraClasses]"
     target="_blank"
+    :title="text"
   >
     <FontAwesome
       v-if="icon && iconBeforeText"
