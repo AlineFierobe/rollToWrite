@@ -11,10 +11,6 @@
     @apply lg:w-1/4;
   }
 
-  &__linkDescription {
-    @apply text-[--home-link-description];
-  }
-
   &__link {
     @apply bg-[--home-link-button-icon-background];
     @apply focus:bg-[--home-link-button-icon-background-hover];

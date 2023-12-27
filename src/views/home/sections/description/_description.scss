@@ -11,10 +11,6 @@
     @apply lg:block;
   }
 
-  &__descriptionHtml {
-    @apply text-[--home-description-text];
-  }
-
   &__descriptionTitle {
     @apply text-[--home-description-title];
 

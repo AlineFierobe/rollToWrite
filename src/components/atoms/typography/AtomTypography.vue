@@ -15,12 +15,12 @@ const props = defineProps<{
 let _atom_class = "a-typography";
 let _tag = props.htmlTag ? props.htmlTag : "div";
 let _version =
-  (_tag == "h1" && props.version == "") ||
-  (_tag == "h2" && props.version == "") ||
-  (_tag == "h3" && props.version == "") ||
-  (_tag == "h4" && props.version == "") ||
-  (_tag == "h5" && props.version == "") ||
-  (_tag == "h6" && props.version == "")
+  (_tag == "h1" && !props.version) ||
+  (_tag == "h2" && !props.version) ||
+  (_tag == "h3" && !props.version) ||
+  (_tag == "h4" && !props.version) ||
+  (_tag == "h5" && !props.version) ||
+  (_tag == "h6" && !props.version)
     ? ""
     : props.version
     ? "-" + props.version
