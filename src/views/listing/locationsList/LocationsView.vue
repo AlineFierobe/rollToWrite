@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  name: "Locations",
+  name: "Locations Listing",
 };
 </script>
 

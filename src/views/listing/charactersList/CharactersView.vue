@@ -1,13 +1,22 @@
 <script lang="ts">
 export default {
-  name: "Characters",
+  name: "Characters Listing",
 };
 </script>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import list from "@/store/listings/characters/characters.store";
+import page from "@/store/pages/listings/characters/charactersPage.store";
+
+import TemplateListing from "@/components/organisms/template/templateListing/TemplateListing.vue";
+
+const _page_class = "p-charactersListing";
+</script>
 
 <template>
-  <div>Characters</div>
+  <TemplateListing
+    :cards="list"
+    :extraClasses="_page_class"
+    :title="page.title"
+  />
 </template>
-
-<style scoped lang="scss"></style>

@@ -1,13 +1,22 @@
 <script lang="ts">
 export default {
-  name: "Constaints",
+  name: "Constraints Listing",
 };
 </script>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import list from "@/store/listings/constraints/constraints.store";
+import page from "@/store/pages/listings/constraints/constraintsPage.store";
+
+import TemplateListing from "@/components/organisms/template/templateListing/TemplateListing.vue";
+
+const _page_class = "p-constraintsListing";
+</script>
 
 <template>
-  <div>Constaints</div>
+  <TemplateListing
+    :cards="list"
+    :extraClasses="_page_class"
+    :title="page.title"
+  />
 </template>
-
-<style scoped lang="scss"></style>
