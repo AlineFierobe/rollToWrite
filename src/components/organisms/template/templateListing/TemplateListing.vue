@@ -9,9 +9,10 @@ import Typography from "@/components/atoms/typography/AtomTypography.vue";
 import ListingAlpha from "@/components/organisms/listings/listingAlpha/OrganismListingAlpha.vue";
 
 defineProps<{
+  cards: Array<{ flags?: string | Array<string>; text: string }>;
+  description: string;
   extraClasses?: string | Array<string>;
   title: string;
-  cards: Array<{ flags?: string | Array<string>; text: string }>;
 }>();
 
 const _template_class = "t-listing";
@@ -25,6 +26,8 @@ const _template_class = "t-listing";
       htmlTag="h2"
       version="heading4"
     />
+
+    <Typography extraClasses="sr-only" :html="description" />
 
     <ListingAlpha
       :cards="cards"

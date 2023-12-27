@@ -16,6 +16,7 @@ const _page_class = "p-charactersListing";
 <template>
   <TemplateListing
     :cards="list"
+    :description="page.description"
     :extraClasses="_page_class"
     :title="page.title"
   />
