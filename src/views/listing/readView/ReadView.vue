@@ -23,7 +23,6 @@ let _page_class = "p-listingView";
     />
 
     <div :class="_page_class + '__html'">
-      à
       <Typography
         :extraClasses="_page_class + '__text'"
         :html="store.defaultText"
@@ -31,7 +30,7 @@ let _page_class = "p-listingView";
       />
 
       <NavLink
-        :extraClasses="_page_class + '__link'"
+        :extraClasses="[_page_class + '__link']"
         :text="store.contactLinkText"
         :url="store.contactLinkUrl"
       />
@@ -40,5 +39,5 @@ let _page_class = "p-listingView";
 </template>
 
 <style lang="scss">
-@import "readView.scss";
+@import "_readView.scss";
 </style>

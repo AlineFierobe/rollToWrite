@@ -29,6 +29,7 @@ import OrganismFooter from "./components/organisms/footer/OrganismFooter.vue";
 
   * {
     @apply outline-[--semantic3];
+    @apply focus:outline-double focus:outline-2 focus:outline-offset-2;
   }
 }
 </style>

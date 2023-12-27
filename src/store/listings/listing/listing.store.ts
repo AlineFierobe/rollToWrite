@@ -7,7 +7,7 @@ const listing = {
   defaultText:
     "Si tu souhaite ajouter des possibilités, tu peux remplir le formulaire en suivant",
   contactLinkUrl: "/contact",
-  contactLinkText: "ce lien",
+  contactLinkText: "ce lien.",
 };
 
 export default listing;

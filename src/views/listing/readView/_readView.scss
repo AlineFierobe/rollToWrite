@@ -1,2 +1,17 @@
+@import "./_readViewColors.scss";
+
 .p-listingView {
+  &__html {
+    @apply flex flex-row gap-1.5;
+  }
+
+  &__link {
+    @apply text-[--link-text] decoration-[--link-underline];
+    @apply focus:text-[--link-text-hover];
+    @apply hover:text-[--link-text-hover];
+
+    @apply text-base font-roboto font-bold;
+    @apply underline underline-offset-2 decoration-2;
+    @apply hover:no-underline;
+  }
 }
