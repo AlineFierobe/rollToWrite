@@ -24,6 +24,11 @@ const homePage = {
       url: "/roll",
     },
   ],
+  meta: {
+    title: "Accueil",
+    description: "Lorem ipsum",
+    keywords: "accueil,informations,description,écriture,rpg",
+  },
 };
 
 export default homePage;

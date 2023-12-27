@@ -28,6 +28,11 @@ const contactPage = {
       },
     ],
   },
+  meta: {
+    title: "Page de Contact",
+    description: "Lorem ipsum",
+    keywords: "contact,ajout,proposition",
+  },
 };
 
 export default contactPage;

@@ -3,7 +3,7 @@ import "./assets/main.css";
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import { createMetaManager } from "vue-meta";
+import { createHead } from "@vueuse/head";
 
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -19,8 +19,11 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 /* add icons to the library */
 library.add(fas, far, fab);
 
-const app = createApp(App).use(createMetaManager()).use(router);
+const head = createHead();
 
-app.component("font-awesome-icon", FontAwesomeIcon);
+const app = createApp(App)
+  .use(head)
+  .use(router)
+  .component("font-awesome-icon", FontAwesomeIcon);
 
 app.mount("#app");

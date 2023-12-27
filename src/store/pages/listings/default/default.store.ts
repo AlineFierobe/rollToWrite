@@ -1,5 +1,10 @@
-const listing = {
-  title: "Toutes les possibilités",
+const defaultPage = {
+  title: "Toutes les listes disponible",
+  meta: {
+    title: "Listes",
+    description: "Lorem ipsum",
+    keywords: "infos,liste,personnages,contraintes,mots,lieux,situations",
+  },
   description:
     "Tu trouveras ici tout ce qu'il est possible de trouver en résultat des lancers de dés.",
   defaultTagline:
@@ -10,4 +15,4 @@ const listing = {
   contactLinkText: "ce lien.",
 };
 
-export default listing;
+export default defaultPage;

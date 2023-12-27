@@ -11,7 +11,9 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@vueuse/head": "^2.0.0",
     "vue": "^3.3.11",
+    "vue-head": "^2.2.0",
     "vue-meta": "^3.0.0-alpha.4",
     "vue-router": "^4.2.5"
   },

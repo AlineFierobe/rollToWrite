@@ -1,27 +1,48 @@
 <script setup lang="ts">
+import { useHead } from "@vueuse/head";
+
+import config from "@/store/config/config.store";
+import page from "@/store/pages/home/homePage.store";
+
 import BannerAlpha from "@/components/molecules/banner/bannerAlpha/MoleculeBannerAlpha.vue";
 import SectionDescription from "./sections/description/SectionDescription.vue";
 import SectionLinks from "./sections/links/SectionLinks.vue";
 
-import data from "@/store/pages/home/homePage.store";
-
 let _page_class = "p-home";
+
+useHead({
+  title: config.title + " | " + page.meta.title,
+  meta: [
+    {
+      name: "description",
+      content: page.meta.description,
+    },
+    {
+      name: "keywords",
+      content: [page.meta.keywords],
+    },
+    {
+      name: "author",
+      content: config.author,
+    },
+  ],
+});
 </script>
 
 <template>
   <div :class="_page_class">
     <!-- SECTION TOP BANNER -->
     <BannerAlpha
-      :alt="data.banner.imageAlt"
+      :alt="page.banner.imageAlt"
       :extraClasses="_page_class + '__banner'"
-      :url="data.banner.imageUrl"
+      :url="page.banner.imageUrl"
     />
 
     <!-- SECTION DESCRIPTION -->
-    <SectionDescription :content="data.description" :pageClass="_page_class" />
+    <SectionDescription :content="page.description" :pageClass="_page_class" />
 
     <!-- SECTION LINKS -->
-    <SectionLinks :links="data.links" :pageClass="_page_class" />
+    <SectionLinks :links="page.links" :pageClass="_page_class" />
   </div>
 </template>
 

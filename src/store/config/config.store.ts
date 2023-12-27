@@ -45,6 +45,7 @@ const config = {
     },
   ],
   title: "Roll To Write",
+  author: "Aowlyne",
 };
 
 export default config;

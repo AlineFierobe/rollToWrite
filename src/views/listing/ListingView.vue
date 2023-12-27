@@ -7,7 +7,8 @@ export default {
 <script setup lang="ts">
 import { RouterView } from "vue-router";
 
-import store from "@/store";
+import config from "@/store/config/config.store";
+import page from "@/store/pages/listings/default/default.store";
 
 import NavLink from "@/components/atoms/navLink/AtomNavLink.vue";
 import Typography from "@/components/atoms/typography/AtomTypography.vue";
@@ -19,21 +20,21 @@ let _page_class = "p-listing";
   <div :class="_page_class">
     <Typography
       :extraClasses="_page_class + '__title'"
-      :html="store.listings.listing.title"
+      :html="page.title"
       htmlTag="h1"
       version="heading2"
     />
 
     <Typography
       :extraClasses="_page_class + '__description'"
-      :html="store.listings.listing.description"
+      :html="page.description"
       htmlTag="div"
     />
 
     <section :class="_page_class + '__subSectionWrapper'">
       <nav :class="_page_class + '__subNavWrapper'">
         <NavLink
-          v-for="link in store.config.listingFilters"
+          v-for="link in config.listingFilters"
           :extraClasses="_page_class + '__subNavItem'"
           :text="link.text"
           :url="link.url"
